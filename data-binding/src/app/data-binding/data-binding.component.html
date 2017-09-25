@@ -1,0 +1,164 @@
+<section>
+  <!-- <article>
+    <h3>Interpolação</h3>
+    <p>String renderizada: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+    <p>O resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+    <p>Curso é legal? {{ !cursoAngular == !curtiu }}</p>
+  </article>
+
+  <article>
+    <h3>Property binding</h3>
+    <img src="{{ urlImagem }}" alt="" />
+    isso é um shorthand da linha de baixo 
+    <img [src]="urlImagem" alt="" /> 
+    <img bind-src="urlImagem" alt="" />
+  </article> -->
+
+<!-- 
+  <article>
+    <h3>Class binding</h3>
+    <div>
+      Selecione uma Classe:
+      <select name="" id="" #classe (change)="0">
+        <option value="success">Sucesso</option>
+        <option value="info">Info</option>
+        <option value="warning">Alerta</option>
+        <option value="danger">Erro</option>
+      </select>
+      <br>
+      <br>
+      <code>
+        <pre>
+          se a comparação retornar true, aplica a classe na property binding
+          [class.alert-success]="classe.value == 'success'"
+        </pre>
+      </code>
+      <div class="alert" role="alert"
+        [class.alert-success]="classe.value == 'success'">
+        kkk</div>
+      <div class="alert" role="alert"
+          [class.alert-info]="classe.value == 'info'">
+        kkk</div>
+      <div class="alert" role="alert"
+          [class.alert-warning]="classe.value == 'warning'">
+        kkk</div>
+      <div class="alert" role="alert"
+          [class.alert-danger]="classe.value == 'danger'">
+        kkk</div>
+    </div>
+
+    <br> <br>
+
+
+    <div class="alert alert-danger"
+      [style.display]="classe.value == 'danger' ? 'block' : 'none'"
+    >Texto colorido conforme valor do combo</div>
+  </article>
+
+   -->
+
+<!-- 
+   <article>
+     <h3>Event binding</h3>
+     <div>
+       <button (click)="botaoClicado()"
+       class="btn btn-primary">Click me</button>
+       <br> <br>
+
+       <input type="text" name="" id=""
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor($event.target.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput
+       >
+       
+       <p>valor atual: {{ valorAtual }}</p>
+
+       <p>Valor salvo: {{ valorSalvo }}</p>
+
+       <pre>
+         ao declarar uma variável local que representa o próprio elemento HTML,
+         é possível usar uma abreviação para subistituir a expressão:
+         
+         $event.target.value
+
+         por
+
+         campoInput.value
+
+         basta colocar a variável #campoInput como propriedade do elemento
+       </pre>
+
+       <br>
+       <br>
+
+       <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+       >
+        Passe o mouse aqui
+       </span>
+       <pre>
+          (mouseover) é igual on-mouseover
+       </pre>
+     </div>
+   </article> 
+  -->
+
+  <!-- <article>
+    <h3>2 way databinding</h3>
+    <p>Só funciona se tiver o módulo FormsModule importado no app.modules</p>
+    <pre> import {{'{'}} FormsModule {{'}'}} from '@angular/forms';</pre>
+    <div>
+      <input type="text" name="" id=""
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      >
+      <hr>
+      <input type="text" name="" id=""
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      >
+
+      <hr>
+
+      <input type="text" name="" id=""
+      [(ngModel)]="nome"
+      >
+
+      <hr>
+
+      <input type="text" name="" id=""
+        [(ngModel)]="pessoa.nome"
+      >
+      <input type="text" name="" id=""
+      [(ngModel)]="pessoa.idade"
+      >
+
+      <p>VOcê digitou: {{nome}}</p>
+    </div>
+    
+  </article> -->
+
+  <article>
+    <h3>Input/Output property</h3>
+    <div>
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+      <contador valor="11"
+        (mudouValor)="onMudouValor($event)"
+      ></contador>
+
+      <pre>
+        o evento "mudouValor" foi criado pelo @Output() mudouValor = new EventEmitter();
+        usando o método EventEmitter que surgiu no Angular 2
+
+        A cada clique no botão, o componente executa:
+          this.mudouValor.emit({{'{'}}novoValor: this.valor{{'}'}});
+        inserindo um novo objeto dentro da classe 'mudouValor'
+      </pre>
+    </div>
+  </article>
+
+</section>
