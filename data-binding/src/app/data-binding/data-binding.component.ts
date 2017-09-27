@@ -22,7 +22,7 @@ export class DataBindingComponent implements OnInit {
 
   pessoa: any = {
     nome: "Alan",
-    idade: "42"
+    idade: "22"
   }
   
   getValor() {

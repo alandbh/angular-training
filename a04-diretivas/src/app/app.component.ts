@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
-  destruir: boolean = false;
-
-    destroi() {
-    this.destruir = !this.destruir;
-    console.log(this.destruir);
-  }
-
- 
 }
